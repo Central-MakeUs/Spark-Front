@@ -24,6 +24,10 @@ class ApiService {
         }
         return ApiService.instance
     }
+    //Set up intercepters
+    private setupInterceptors(): void{
+
+    }
 
     //When Token is expired
 
@@ -32,11 +36,7 @@ class ApiService {
         console.log('토큰이 만료됐습니다. 다 로그인을 시도해 주세요.')
     }
 
-    //Set up intercepters
-    private setupInterceptors(): void{
 
-    }
-    
     //set Token
     private async setToken(token) {}
 

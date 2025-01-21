@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import {colors} from "./src/colors"
+import {COLORS} from "./src/colors"
 
 export default {
   content: [ "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors:{
-        ...colors
+        ...COLORS
       },
       borderRadius:{
           'small': "5px",
