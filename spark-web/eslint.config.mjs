@@ -23,6 +23,10 @@ export default tseslint.config(
         version: 'detect',
       },
       'import/resolver': {
+        alias: {
+          map: [['@', './src']],
+          extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+        },
         typescript: true,
       },
     },
@@ -44,7 +48,16 @@ export default tseslint.config(
       'import/namespace': 'off',
       'import/no-named-as-default-member': 'off',
       'import/no-duplicates': 'error',
-      'import/extensions': ['error', 'ignorePackages'],
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
       'import/order': [
         'error',
         {
