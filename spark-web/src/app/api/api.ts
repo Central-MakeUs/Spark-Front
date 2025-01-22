@@ -15,7 +15,7 @@ const headers: RawAxiosRequestHeaders = {
 class ApiService {
   private static instance: ApiService;
   private client: AxiosInstance;
-  private isRefreshing = false;
+  // private isRefreshing = false;
 
   private constructor() {
     this.client = axios.create({
@@ -42,11 +42,11 @@ class ApiService {
   //Set up intercepters
   private setupInterceptors(): void {}
 
-  //set Token
-  private async setToken(token) {}
+  // //set Token
+  // private async setToken(token) {}
 
-  //get Token
-  private async getToken() {}
+  // //get Token
+  // private async getToken() {}
 
   public async request<T, D = any>(
     method: Method,
